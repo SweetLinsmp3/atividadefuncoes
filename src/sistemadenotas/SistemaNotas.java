@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author dti
  */
-public class Sistemadenotas {
+public class SistemaNotas {
     /**
      * @param args the command line arguments
      */
@@ -27,12 +27,12 @@ public class Sistemadenotas {
             System.out.println("Digite a terceira nota: ");
             n3 = ler.nextDouble();
             
-        aprovacao = CalcularMedia(n1,n2,n3);
+        aprovacao = calcularMedia(n1,n2,n3);
         System.out.println("Voce esta: "+aprovacao);
         
     }
     //as funções precisam estar dentro de um classe para serem declaradas
-    public static String CalcularMedia(double n1, double n2, double n3){
+    public static String calcularMedia(double n1, double n2, double n3){
         double media = (n1+n2+n3)/3;
         if (media >= 7){
             return "Aprovado";
