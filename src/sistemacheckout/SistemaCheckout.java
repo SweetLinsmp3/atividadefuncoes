@@ -59,7 +59,7 @@ public static double verificarFreteGratis(double total){
             return 15;
         }
 }
-public static void exibirResumo(double vb,int porcentagem,double da,double frete){
+public static void exibirResumo(double valorBruto,int porcentagem,double descontoAplicado,double frete){
 
 //resumo de tudo, o recibo
 
@@ -67,10 +67,10 @@ public static void exibirResumo(double vb,int porcentagem,double da,double frete
     System.out.println("\n--- RESUMO DA COMPRA ---");
 
     //valor bruto com duas casas decimais e pulando linha
-    System.out.printf("Valor Bruto: R$ %.2f%n", vb);
+    System.out.printf("Valor Bruto: R$ %.2f%n", valorBruto);
 
     //mostra quanto de desconto foi aplicado e o valor com ele inserido
-    System.out.printf("Desconto aplicado (%d%%): R$ %.2f%n",porcentagem,da);
+    System.out.printf("Desconto aplicado (%d%%): R$ %.2f%n",porcentagem,descontoAplicado);
 
     //se o frete for 0, avisar que o frete é grátis acima de 200
     if (frete == 0){
@@ -83,7 +83,7 @@ public static void exibirResumo(double vb,int porcentagem,double da,double frete
     System.out.println("---------------------------------");
 
     //mostrando o valor final
-    double total = vb - da + frete;
+    double total = valorBruto - descontoAplicado + frete;
     System.out.printf("VALOR TOTAL A PAGAR: R$ %.2f",total);
 }
 
