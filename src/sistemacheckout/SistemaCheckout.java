@@ -74,7 +74,7 @@ public static void exibirResumo(double vb,int porcentagem,double da,double frete
 
     //se o frete for 0, avisar que o frete é grátis acima de 200
     if (frete == 0){
-        System.out.printf("Frete: R$ %.2f (Grátis acima de 200)%n",frete);
+        System.out.printf("Frete: R$ %.2f (Grátis acima de R$ 200)%n",frete);
     }else {
         System.out.printf("Frete: R$ %.2f%n",frete);
     }
