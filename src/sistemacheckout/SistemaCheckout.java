@@ -72,19 +72,15 @@ public static void exibirResumo(double valorBruto,int porcentagem,double descont
     //mostra quanto de desconto foi aplicado e o valor com ele inserido
     System.out.printf("Desconto aplicado (%d%%): R$ %.2f%n",porcentagem,descontoAplicado);
 
-    //se o frete for 0, avisar que o frete é grátis acima de 200
-    if (frete == 0){
-        System.out.printf("Frete: R$ %.2f (Grátis acima de R$ 200)%n",frete);
-    }else {
-        System.out.printf("Frete: R$ %.2f%n",frete);
-    }
+    //Mostrar o frete e avisar que frete grátis apenas acima de 200
+    System.out.printf("Frete: R$ %.2f (Grátis acima de R$ 200)%n",frete);
 
     //apresentação
     System.out.println("---------------------------------");
 
     //mostrando o valor final
     double total = valorBruto - descontoAplicado + frete;
-    System.out.printf("VALOR TOTAL A PAGAR: R$ %.2f",total);
+    System.out.printf("VALOR TOTAL A PAGAR: R$ %.2f%n",total);
 }
 
 }
